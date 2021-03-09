@@ -11,7 +11,7 @@ library(rnaturalearth)
 sf <- st_read("Data/MajorWatercourses/Major_watercourse_lines.shp") %>% 
   filter(NAME == "Burdekin River")
 
-dat <- read_csv("BurdekinSites.csv") %>% 
+dat <- read_csv("Data/BurdekinSites.csv") %>% 
   st_as_sf(coords = c("Lon", "Lat")) %>% 
   st_set_crs("EPSG:4326") %>% 
   st_make_valid()
